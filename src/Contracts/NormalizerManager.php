@@ -6,7 +6,7 @@ use Closure;
 
 interface NormalizerManager
 {
-    public function register(string $name, Closure $normalizer): NormalizerManager;
+    public function register(string $name, Closure $normalizer): self;
 
     public function normalizer(string $name): Closure;
 

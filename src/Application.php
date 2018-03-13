@@ -2,17 +2,17 @@
 
 namespace Curlyspoon\Framework;
 
+use Dotenv\Dotenv;
+use Dotenv\Exception\InvalidPathException;
+use Laravel\Lumen\Application as LumenApplication;
+use Curlyspoon\Framework\Providers\ViewServiceProvider;
 use Curlyspoon\Framework\Console\Kernel as ConsoleKernel;
-use Curlyspoon\Framework\Exceptions\Handler as ExceptionHandler;
 use Curlyspoon\Framework\Http\Controllers\PageController;
 use Curlyspoon\Framework\Providers\ConsoleServiceProvider;
 use Curlyspoon\Framework\Providers\ElementServiceProvider;
-use Curlyspoon\Framework\Providers\ViewServiceProvider;
-use Dotenv\Dotenv;
-use Dotenv\Exception\InvalidPathException;
+use Curlyspoon\Framework\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
 use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandlerContract;
-use Laravel\Lumen\Application as LumenApplication;
 
 class Application extends LumenApplication
 {

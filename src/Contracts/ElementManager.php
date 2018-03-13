@@ -4,7 +4,7 @@ namespace Curlyspoon\Framework\Contracts;
 
 interface ElementManager
 {
-    public function register(string $name, string $element): ElementManager;
+    public function register(string $name, string $element): self;
 
     public function render(string $name, array $options = []): string;
 

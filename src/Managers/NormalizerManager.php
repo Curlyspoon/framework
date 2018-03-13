@@ -3,8 +3,8 @@
 namespace Curlyspoon\Framework\Managers;
 
 use Closure;
-use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
 use InvalidArgumentException;
+use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
 
 class NormalizerManager implements NormalizerManagerContract
 {
@@ -19,7 +19,7 @@ class NormalizerManager implements NormalizerManagerContract
 
     public function normalizer(string $name): Closure
     {
-        if (!isset($this->normalizers[$name])) {
+        if (! isset($this->normalizers[$name])) {
             throw new InvalidArgumentException(sprintf('No normalizer with name [%s] found.', $name));
         }
 

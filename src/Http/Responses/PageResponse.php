@@ -2,11 +2,11 @@
 
 namespace Curlyspoon\Framework\Http\Responses;
 
-use Curlyspoon\Framework\Contracts\ElementManager as ElementManagerContract;
+use Illuminate\Http\Response;
 use Curlyspoon\Framework\Libs\Menu;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Curlyspoon\Framework\Contracts\ElementManager as ElementManagerContract;
 
 class PageResponse extends Response
 {
@@ -28,13 +28,13 @@ class PageResponse extends Response
     {
         $filepath = $this->pagePath().'/'.$filename;
 
-        if (!file_exists($filepath)) {
+        if (! file_exists($filepath)) {
             $this->notFound(sprintf('file [%s] does not exist', $filepath));
         }
-        if (!is_file($filepath)) {
+        if (! is_file($filepath)) {
             $this->notFound(sprintf('file [%s] is not a file', $filepath));
         }
-        if (!is_readable($filepath)) {
+        if (! is_readable($filepath)) {
             $this->notFound(sprintf('file [%s] is not readable', $filepath));
         }
 
@@ -61,10 +61,10 @@ class PageResponse extends Response
     {
         $path = resource_path('pages/'.$this->pageName);
 
-        if (!file_exists($path)) {
+        if (! file_exists($path)) {
             $this->notFound('folder does not exist');
         }
-        if (!is_dir($path)) {
+        if (! is_dir($path)) {
             $this->notFound('folder is not a directory');
         }
 

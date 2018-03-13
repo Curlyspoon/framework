@@ -2,9 +2,9 @@
 
 namespace Curlyspoon\Framework\Http\Controllers;
 
-use Curlyspoon\Framework\Http\Responses\PageResponse;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Curlyspoon\Framework\Http\Responses\PageResponse;
 
 class PageController extends Controller
 {

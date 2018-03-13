@@ -2,9 +2,9 @@
 
 namespace Curlyspoon\Framework\Console;
 
-use Curlyspoon\Framework\Console\Commands\ServeCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
+use Curlyspoon\Framework\Console\Commands\ServeCommand;
 
 class Kernel extends ConsoleKernel
 {
