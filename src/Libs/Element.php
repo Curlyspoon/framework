@@ -2,9 +2,9 @@
 
 namespace Curlyspoon\Framework\Libs;
 
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Curlyspoon\Framework\Contracts\Element as ElementContract;
 use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 abstract class Element implements ElementContract
 {

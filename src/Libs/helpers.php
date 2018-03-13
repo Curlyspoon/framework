@@ -1,11 +1,11 @@
 <?php
 
-if (!function_exists('asset')) {
+if (! function_exists('asset')) {
     function asset($path)
     {
         $path = '/'.ltrim($path, '/');
         $manifestPath = base_path('public/mix-manifest.json');
-        if (!file_exists($manifestPath)) {
+        if (! file_exists($manifestPath)) {
             throw new \Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException($manifestPath);
         }
 

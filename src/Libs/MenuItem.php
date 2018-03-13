@@ -3,8 +3,8 @@
 namespace Curlyspoon\Framework\Libs;
 
 use ArrayAccess;
-use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
 
 class MenuItem implements ArrayAccess
 {

@@ -3,8 +3,8 @@
 namespace Curlyspoon\Framework\Libs;
 
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 use InvalidArgumentException;
+use Illuminate\Support\Collection;
 
 class Menu extends Collection
 {
@@ -15,22 +15,22 @@ class Menu extends Collection
         $this->prepare();
     }
 
-    public static function fromFile(string $filepath): Menu
+    public static function fromFile(string $filepath): self
     {
-        if (!file_exists($filepath)) {
+        if (! file_exists($filepath)) {
             throw new InvalidArgumentException('Menu file does not exist');
         }
-        if (!is_file($filepath)) {
+        if (! is_file($filepath)) {
             throw new InvalidArgumentException('Menu file is not a file');
         }
-        if (!is_readable($filepath)) {
+        if (! is_readable($filepath)) {
             throw new InvalidArgumentException('Menu file is not readable');
         }
 
         return self::fromJson(file_get_contents($filepath));
     }
 
-    public static function fromJson(string $json): Menu
+    public static function fromJson(string $json): self
     {
         $array = json_decode($json, true);
         if (JSON_ERROR_NONE !== json_last_error()) {
@@ -40,7 +40,7 @@ class Menu extends Collection
         return self::fromArray($array);
     }
 
-    public static function fromArray(array $array): Menu
+    public static function fromArray(array $array): self
     {
         $menuItems = [];
         foreach ($array as $menuItem) {

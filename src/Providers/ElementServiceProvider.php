@@ -2,18 +2,12 @@
 
 namespace Curlyspoon\Framework\Providers;
 
-use Curlyspoon\Framework\Contracts\ElementManager as ElementManagerContract;
-use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
-use Curlyspoon\Framework\Elements\MarkdownElement;
-use Curlyspoon\Framework\Elements\RowElement;
-use Curlyspoon\Framework\Elements\SectionBlurImageElement;
-use Curlyspoon\Framework\Elements\SectionElement;
-use Curlyspoon\Framework\Elements\SectionTextColumnsElement;
-use Curlyspoon\Framework\Elements\TitleElement;
-use Curlyspoon\Framework\Managers\ElementManager;
-use Curlyspoon\Framework\Managers\NormalizerManager;
 use Illuminate\Support\ServiceProvider;
 use Symfony\Component\OptionsResolver\Options;
+use Curlyspoon\Framework\Managers\ElementManager;
+use Curlyspoon\Framework\Managers\NormalizerManager;
+use Curlyspoon\Framework\Contracts\ElementManager as ElementManagerContract;
+use Curlyspoon\Framework\Contracts\NormalizerManager as NormalizerManagerContract;
 
 class ElementServiceProvider extends ServiceProvider
 {
